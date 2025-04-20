@@ -1,0 +1,96 @@
+.upload-section {
+    margin-bottom: 2rem;
+  }
+  
+  .upload-section h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .upload-section input[type='file'] {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .table-section {
+    margin-top: 1rem;
+  }
+  
+  .action-bar {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .rows-dropdown {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .editable-table td {
+    position: relative;
+  }
+  
+  .edit-input {
+    width: 100%;
+    padding: 6px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  tr[title] {
+    cursor: context-menu;
+  }
+  
+  button {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  .filter-input {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+  }
+  
+  .filter-input:focus {
+    background-color: #fff;
+  }
+
+  .input-with-mic {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .mic-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .mic-button:hover {
+    color: #d9534f;
+  }
+  
+  

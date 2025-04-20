@@ -1,0 +1,90 @@
+<div class="upload-section">
+    <h2>Upload CSV or Excel File</h2>
+    <input
+      id="file-upload"
+      name="file-upload"
+      type="file"
+      (change)="handleFileUpload($event)"
+      accept=".csv, .xlsx"
+    />
+  </div>
+  
+  <div *ngIf="visibleData.length" class="table-section">
+    <div class="action-bar">
+      <button (click)="downloadCSV()">📤 Download CSV</button>
+      <select
+        [(ngModel)]="rowsPerPage"
+        (ngModelChange)="onRowsPerPageChange($event)"
+        class="rows-dropdown"
+      >
+        <option [value]="10">10</option>
+        <option [value]="25">25</option>
+        <option [value]="50">50</option>
+        <option [value]="dataset.length">All</option>
+      </select>
+    </div>
+  
+    <p-table
+      #table
+      [customSort]="true"
+      (sortFunction)="customSort($event)"
+      [value]="visibleData"
+      [paginator]="false"
+      [globalFilterFields]="columns"
+      scrollable="true"
+      scrollHeight="500px"
+      [resizableColumns]="true"
+      columnResizeMode="expand"
+      class="editable-table"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th *ngFor="let col of columns" [pSortableColumn]="col" pResizableColumn>
+            {{ col | titlecase }}
+            <p-sortIcon [field]="col"></p-sortIcon>
+          </th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <th *ngFor="let col of columns">
+            <input
+  pInputText
+  type="text"
+  class="filter-input"
+  placeholder="Search"
+  (input)="filterColumn($event, col, table)"
+/>
+
+          </th>
+          <th></th>
+        </tr>
+      </ng-template>
+  
+      <ng-template pTemplate="body" let-row let-i="rowIndex">
+        <tr
+          (contextmenu)="enableEdit(i, $event)"
+          [title]="'Right click to edit this row'"
+        >
+          <td *ngFor="let col of columns">
+            <ng-container *ngIf="editingRow === i; else viewMode">
+                <div class="input-with-mic">
+                    <input [(ngModel)]="visibleData[i][col]" class="edit-input" type="text" />
+                    <button type="button" (click)="startVoiceRecognition(i, col)" class="mic-button" title="Use voice input 🎤">
+                      🎤
+                    </button>
+                  </div>
+                  
+            </ng-container>
+            <ng-template #viewMode>
+              {{ row[col] }}
+            </ng-template>
+          </td>
+          <td>
+            <button *ngIf="editingRow === i" (click)="saveEdit()">Save</button>
+          </td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+  </div>
+  
