@@ -73,7 +73,7 @@ A dynamic and feature-rich data table built using Angular and PrimeNG. Upload fi
 ## 🚀 Running the App Locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/ay03/dynamic-data-table-angular.git
+cd dynamic-data-table-angular
 npm install
 ng serve
