@@ -1,96 +1,109 @@
+/* Container for the upload section */
 .upload-section {
-    margin-bottom: 2rem;
-  }
-  
-  .upload-section h2 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .upload-section input[type='file'] {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-  
-  .table-section {
-    margin-top: 1rem;
-  }
-  
-  .action-bar {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    align-items: center;
-  }
-  
-  .rows-dropdown {
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 0.9rem;
-  }
-  
-  .editable-table td {
-    position: relative;
-  }
-  
-  .edit-input {
-    width: 100%;
-    padding: 6px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  tr[title] {
-    cursor: context-menu;
-  }
-  
-  button {
-    padding: 4px 10px;
-    font-size: 0.8rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+  margin-bottom: 2rem;
+}
 
-  
-  .filter-input {
-    width: 100%;
-    padding: 6px 10px;
-    font-size: 0.85rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: #f4f4f4;
-  }
-  
-  .filter-input:focus {
-    background-color: #fff;
-  }
+/* Header spacing inside upload section */
+.upload-section h2 {
+  margin-bottom: 0.5rem;
+}
 
-  .input-with-mic {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-  
-  .mic-button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .mic-button:hover {
-    color: #d9534f;
-  }
-  
-  
+/* File input styling */
+.upload-section input[type='file'] {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Container for the data table section */
+.table-section {
+  margin-top: 1rem;
+}
+
+/* Action bar containing buttons and dropdown */
+.action-bar {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Styling for dropdown to select rows per page */
+.rows-dropdown {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+/* Ensure table cells handle relative positioning */
+.editable-table td {
+  position: relative;
+}
+
+/* Editable input field styling */
+.edit-input {
+  width: 100%;
+  padding: 6px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Show context menu cursor on rows with a title attribute */
+tr[title] {
+  cursor: context-menu;
+}
+
+/* General button styling */
+button {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Input fields used for column filtering */
+.filter-input {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+}
+
+/* Filter input focus effect */
+.filter-input:focus {
+  background-color: #fff;
+}
+
+/* Layout for input field with microphone icon */
+.input-with-mic {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Mic icon button styling */
+.mic-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Mic icon hover effect */
+.mic-button:hover {
+  color: #d9534f;
+}
